@@ -7,7 +7,7 @@ const Modal = () => {
 
     if (!modalBookOpen || !selectedBook) return null;
 
-    const price = selectedBook.saleInfo.retailPrice.amount
+    const price = selectedBook.saleInfo?.retailPrice?.amount || "Não disponível";
 
     return (
         <div className="modal-overlay">
@@ -25,7 +25,7 @@ const Modal = () => {
                          <p>{selectedBook.volumeInfo?.description}</p>
                         </div>
                         <div className="price">
-                            <p><strong>Preço:</strong> {price
+                            <p><strong>Preço:</strong> {typeof price === 'number'
                                 ? `R$ ${price.toFixed(2).replace('.', ',')}` 
                                 : "Não disponível"}</p>
                             <div className="interactive">

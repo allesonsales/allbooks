@@ -3,6 +3,7 @@ import { CombinedContext } from "../providers/combined/CombinedProvider";
 import './style.css'
 import DesktopMenu from "./menus/desktop/desktopmenu";
 import MobileMenu from "./menus/mobile/mobile";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Search = () => {
@@ -16,9 +17,14 @@ const Search = () => {
     const [light, setLight] = useState(false);
     const [errorMessage, setErrorMessage]= useState("");
     const [mobileOpen, setMobileOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setTitles(event.target.value);
+        if (location.pathname !== "/" && location.pathname !== "/allbooks") {
+            navigate('/allbooks');
+        }
     }
 
     const changeTheme = () => {
@@ -28,7 +34,6 @@ const Search = () => {
 
 
     useEffect(() => {
-
         if (!titles) {
             setList([])
             return
