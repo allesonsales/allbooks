@@ -47,7 +47,10 @@ const Carrinho = () => {
                     <p className="not">Seu carrinho está vazio :(</p>
                 )}
             </div>
-            {Object.keys(cart).length > 0 ? <button onClick={buying}>Finalizar Compra</button> : null}
+            <div className="totalPrice">
+                {cartBooks.length > 0 ? <span>Total do Carrinho: {Number(totalPrice).toFixed(2).replace('.',',')}</span> : null}
+                {cartBooks.length > 0 ? <button onClick={buying}>Finalizar Compra</button> : null}
+            </div>
         </section>
     );
 };
