@@ -1,0 +1,75 @@
+#cart {
+    width: 100vw;
+    height: fit-content;
+}
+
+.containerCart{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem;
+
+    .boxBook {
+        display: flex;
+        width: 80%;
+        gap: .8rem;
+        padding: .8rem;
+        border: solid 1px var(--sutil);
+        border-radius: 15px;
+
+        .boxCartContent {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            
+            .title-author {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                color: var(--character);
+    
+                .title {
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                }
+    
+                .author {
+                    font-weight: 600;
+                }
+            }
+    
+            .price {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 1.3rem;
+                color: var(--character);
+    
+                .bi-trash {
+                    cursor: pointer;
+                    font-size: 1rem;
+                }
+            }
+    
+        }
+    }
+
+    .not {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--character);
+        align-self: center;
+        align-content: center;
+    }
+    
+}
+

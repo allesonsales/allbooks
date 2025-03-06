@@ -1,0 +1,109 @@
+.containerbooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    gap: 1rem;
+    margin: 4rem;
+
+    .boxBook {
+        display: flex;
+        gap: .5rem;
+        padding: .8rem;
+        border: solid 1px var(--sutil);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+
+        .boxImg {
+            .categories {
+                color: var(--character-secundary);
+                font-weight: 600;
+            }
+        }
+
+        .boxContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+
+            .title-author{
+                display: flex;
+                flex-direction: column;
+
+                .title {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    line-height: 20px;
+                    color: var(--character);
+                }
+
+                .author {
+                    text-transform: lowercase;
+                    color: var(--character);
+                }
+
+                .author::first-letter {
+                    text-transform: uppercase;
+                }
+        }
+
+            .description {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 400;
+                color: var(--character-secundary);
+            }
+
+            .price {
+                color: var(--character);
+                font-size: .9rem;
+                font-weight: 600;
+                align-self: flex-end;
+            }
+
+        }
+        .interactive {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            height: 100%;
+            
+            .chart{
+                font-size: 1.5rem;
+                .bi-cart-plus {
+                    color: var(--items-selected);
+                }
+                .bi-cart-check-fill {
+                    color: var(--items-selected);
+                }
+            }
+        }
+    
+        img {
+            height: 200px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+    }
+    
+    .boxBook:hover {
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
+
+    .bi-heart-fill, .bi-heart {
+        color:var(--items-selected);
+    }
+}

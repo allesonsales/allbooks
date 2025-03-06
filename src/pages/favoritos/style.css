@@ -1,0 +1,97 @@
+.containerFavorites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    gap: 1rem;
+    margin: 4rem;
+
+    .boxBook {
+        display: flex;
+        gap: 1rem;
+        padding: .8rem;
+        border: solid 1px var(--sutil);
+        border-radius: 15px;
+    
+        .boxImg {
+    
+            .categories {
+                color: var(--character-secundary);
+                font-weight: 600;
+            }
+        }
+    
+        .boxContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+    
+            .title-author{
+                display: flex;
+                flex-direction: column;
+    
+                .title {
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    line-height: 20px;
+                    color: var(--character);
+                }
+    
+                .author {
+                    text-transform: lowercase;
+                    color: var(--character);
+                }
+    
+                .author::first-letter {
+                    text-transform: uppercase;
+                }
+        }
+    
+            .description {
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 400;
+                color: var(--character-secundary);
+            }
+
+            .price {
+                align-self: flex-end;
+                color: var(--character);
+            }
+        }
+
+        .interactive {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between;
+
+            .chart {
+                color: var(--items-selected);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .not {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--character);
+        align-self: center;
+        align-content: center;
+    }
+}
+
+.favorite {
+    color: var(--items-selected);
+    cursor: pointer;
+}
+

@@ -1,0 +1,24 @@
+.cardHome {
+    width: 30%;
+    color: var(--character);
+    background-color: var(--sutil);
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    color: var(--character);
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 818px){
+    .cardHome {
+        width: 70%;
+    }
+}
+

@@ -1,0 +1,27 @@
+.backgroundCompra {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modalCompra {
+        background-color: var(--sutil);
+        border-radius: 15px;
+        color: var(--character);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .bi {
+            font-size: 3rem;
+            color: var(--items-selected);
+            margin-bottom: 1rem;
+        }
+    }
+}

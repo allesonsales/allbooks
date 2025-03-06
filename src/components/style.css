@@ -1,0 +1,105 @@
+.searchContainer {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    background-color: var(--header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 500;
+
+    .left-side {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: .5rem 2rem;
+        
+        .logoImg {
+            background-image: var(--logo-img-desk);
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            z-index: 5000;
+        }
+        
+        .userContent {
+            display: flex;
+            flex-direction: column;
+            color: var(--character);
+            text-align: left;
+            min-width: 100px;
+
+            .userName {
+                text-transform: none;
+                width: 100px;
+            }
+            
+            .userName::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    nav {
+        padding: .5rem 2rem;
+    }
+
+    form {
+        margin: .5rem 2rem;
+    }
+
+    input {
+        border-radius: 15px;
+        padding: .5rem 2rem;
+        width: 100%;
+        color: var(--character-secundary);
+    }
+
+    .toggle {
+        position: relative;
+        z-index: 500;
+        width: 45px;
+        height: 15px;
+        background-color: var(--sutil);
+        cursor: pointer;
+        display: flex;
+        border-radius: 15px;
+        padding: .5rem;
+        position: absolute;
+        right: 20px;
+        top: 100px;
+        box-shadow: 2px 2px 8px 2px #2929292e;
+    
+        .icon-theme {
+            color: var(--bottons);
+        }
+    }
+}
+
+@media (max-width:818px) {
+    .searchContainer {
+        .left-side {
+            margin: 1rem;
+            flex-direction: column;
+            gap: .5rem;
+
+            .logoImg {
+                background-image: var(--logo-img-mob);
+                height: 50px;
+            }
+
+            .userContent {
+                font-size: .8rem;
+            }
+        }
+
+        .toggle {
+            width: 15px;
+        }
+    }
+
+}

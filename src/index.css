@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: var(--background);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.light {
+  --header: #D4C5A8;
+  --background:#F5F5F5;
+  --character: #2A2A2A;
+  --character-secundary: #625a45;
+  --bottons: #a68a64;
+  --sutil: #E2DED0;
+  --items: #E54B4B;
+  --items-selected: #d0820d;
+  --logo-img-desk: url('/Logo-Desk.png');
+  --logo-img-mob: url('/Logo-Mob.png');
+  transition: ease-in-out .2s;
+}
+
+.dark {
+  --header: #2A2A2A;
+  --background:#1C1C1C;
+  --character: #E2DED0;
+  --character-secundary: #8F8F8F;
+  --bottons: #A68A64;
+  --sutil: #3E3E3E;
+  --items: rgb(107, 73, 220);
+  --items-selected: #F49E4C;
+  --logo-img-desk: url('/Logo-Desk-dark.png');
+  --logo-img-mob: url('/Logo-Mob.png');
+  transition: ease-in-out .2s;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

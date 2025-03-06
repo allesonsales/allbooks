@@ -1,0 +1,60 @@
+.desktop-menu {
+    margin: .5rem 4rem;
+}
+
+.desktop-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+
+    li, .bi {
+        display: flex;
+        align-items: center;
+        color: var(--character);
+        transition: ease-in-out .2s;
+        cursor: pointer;
+        position: relative;
+    }
+
+    li:hover, .bi-cart-fill:hover {
+        color: var(--bottons);
+        transition: ease-in-out .2s;
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+
+        span {
+            font-size: .7rem;
+        }
+    }
+
+    .countFavorite, .countCart {
+        position: absolute;
+        top: -15px;
+        right: -20px;
+        background-color: var(--sutil);
+        padding: .5rem .5rem;
+        border-radius: 50px;
+        font-size: .8rem;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .countCart {
+        position: absolute;
+        top: -15px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 818px) {
+    .desktop-menu {
+        display: none;
+    }
+}
