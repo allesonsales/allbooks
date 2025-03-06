@@ -1,8 +1,22 @@
-# React + Vite
+# Projeto AllBooks :blue_book:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **AllBooks** é uma plataforma integrada à API do Google Livros, permitindo que os usuários busquem livros, adicionem ao carrinho e salvem nos favoritos.
 
-Currently, two official plugins are available:
+## Funcionalidades:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Pesquisa em tempo real pela API do Google Books
+- Adicionar livros ao carrinho de compras
+- Salvar favoritos para acesso fácil
+
+## Tecnologias utilizadas
+
+- HTML
+- CSS
+- Javascript
+- React
+- API Google Books
+- Vite
+
+_Este projeto foi uma excelente oportunidade para aprofundar os conhecimentos em **React Hooks**, especialmente no uso de **Context API** para gerenciar o estado global da aplicação._
+
+[Deploy](https://allesonsales.github.io/allbooks)
