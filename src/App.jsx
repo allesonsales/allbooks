@@ -22,7 +22,8 @@ function App() {
         <HomeModal />
         <Modal />
         <Routes>
-            <Route path="/" element={<><Search /><CardHome /><Livros /><Footer/></>} />
+            <Route path="/" element={<Navigate to="/allbooks" />} />
+            <Route path="/allbooks" element={<><Search /><CardHome /><Livros /><Footer/></>} />
             <Route path="/favoritos" element={<><Search /><Favoritos /><Footer/></>} />
             <Route path='/carrinho' element={<><Search /><Carrinho /><ModalCompra/><Footer/></>} />
         </Routes>
