@@ -4,7 +4,7 @@ import Search from './components/search'
 import Livros from './pages/livros'
 import CombinedProvider from './providers/combined/CombinedProvider'
 import Favoritos from './pages/favoritos/favoritos'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Carrinho from './pages/carrinho/carrinho'
 import HomeModal from './components/modalHome/homeModal'
 import Modal from './components/modal/modal'
