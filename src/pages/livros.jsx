@@ -19,7 +19,7 @@ const Livros = () => {
             {list.map((
                 {volumeInfo: {title, authors, description, categories, imageLinks}, 
                  saleInfo }, index) => {
-                    const price = saleInfo?.retailPrice?.amount;
+                    const price = saleInfo?.retailPrice?.amount || "Não disponível";
                     return (
                         <div key={index} className="boxBook">
                             <div className="boxImg" onClick={() => handleOpenBook(list[index])}>
